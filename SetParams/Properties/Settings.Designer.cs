@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SetParams2.Properties
+namespace SetParams.Properties
 {
 
 

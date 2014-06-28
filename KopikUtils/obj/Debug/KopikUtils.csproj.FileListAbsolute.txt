@@ -1,4 +1,0 @@
-D:\Projekty\kopik2\KopikUtils\bin\Debug\KopikUtils.dll
-D:\Projekty\kopik2\KopikUtils\bin\Debug\KopikUtils.pdb
-D:\Projekty\kopik2\KopikUtils\obj\Debug\KopikUtils.dll
-D:\Projekty\kopik2\KopikUtils\obj\Debug\KopikUtils.pdb
