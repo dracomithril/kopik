@@ -61,12 +61,14 @@
             this.gdzieSkopiowaćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.koniecToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // AddFile
             // 
-            this.AddFile.Location = new System.Drawing.Point(301, 51);
+            this.AddFile.Location = new System.Drawing.Point(301, 40);
             this.AddFile.Name = "AddFile";
             this.AddFile.Size = new System.Drawing.Size(95, 23);
             this.AddFile.TabIndex = 0;
@@ -76,7 +78,7 @@
             // 
             // AddDirectory
             // 
-            this.AddDirectory.Location = new System.Drawing.Point(301, 80);
+            this.AddDirectory.Location = new System.Drawing.Point(299, 69);
             this.AddDirectory.Name = "AddDirectory";
             this.AddDirectory.Size = new System.Drawing.Size(95, 23);
             this.AddDirectory.TabIndex = 1;
@@ -86,6 +88,9 @@
             // 
             // listBox1
             // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 116);
             this.listBox1.Name = "listBox1";
@@ -99,7 +104,7 @@
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(301, 344);
+            this.save.Location = new System.Drawing.Point(3, 202);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(95, 23);
             this.save.TabIndex = 4;
@@ -109,7 +114,7 @@
             // 
             // upDate
             // 
-            this.upDate.Location = new System.Drawing.Point(301, 286);
+            this.upDate.Location = new System.Drawing.Point(3, 144);
             this.upDate.Name = "upDate";
             this.upDate.Size = new System.Drawing.Size(95, 23);
             this.upDate.TabIndex = 5;
@@ -162,7 +167,7 @@
             // 
             // delete
             // 
-            this.delete.Location = new System.Drawing.Point(301, 315);
+            this.delete.Location = new System.Drawing.Point(3, 173);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(95, 23);
             this.delete.TabIndex = 7;
@@ -289,7 +294,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(302, 183);
+            this.button1.Location = new System.Drawing.Point(3, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 40);
             this.button1.TabIndex = 11;
@@ -297,28 +302,40 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.delete);
+            this.panel1.Controls.Add(this.upDate);
+            this.panel1.Controls.Add(this.save);
+            this.panel1.Location = new System.Drawing.Point(301, 116);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(105, 251);
+            this.panel1.TabIndex = 12;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(406, 383);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddFile);
+            this.Controls.Add(this.AddDirectory);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.delete);
-            this.Controls.Add(this.upDate);
-            this.Controls.Add(this.save);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.AddDirectory);
-            this.Controls.Add(this.AddFile);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(800, 800);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(422, 421);
             this.Name = "Form1";
             this.Text = "Set_Kopik";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,6 +375,7 @@
         private System.Windows.Forms.ToolStripMenuItem gdzieSkopiowaćToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem koniecToolStripMenuItem3;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

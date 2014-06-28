@@ -42,6 +42,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClassLibrary1.dll" size="6656">
+      <assemblyIdentity name="ClassLibrary1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>sOxrOHKC+v47kHjHgs8/H9MCttg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="kopik.exe" size="8704">
       <assemblyIdentity name="kopik" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
@@ -49,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>15akrJlpl9hhogdeRQSNnItTElE=</dsig:DigestValue>
+        <dsig:DigestValue>LAxu7DSllQSryf1oExIzGnysyX4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -14,3 +14,6 @@ E:\dokumenty\Visual Studio 2012\Projects\kopik\kopik\obj\Debug\kopik.exe.manifes
 E:\dokumenty\Visual Studio 2012\Projects\kopik\kopik\obj\Debug\kopik.application
 E:\dokumenty\Visual Studio 2012\Projects\kopik\kopik\bin\Debug\ClassLibrary1.dll
 E:\dokumenty\Visual Studio 2012\Projects\kopik\kopik\bin\Debug\ClassLibrary1.pdb
+D:\Projekty\kopik2\kopik\bin\Debug\kopik.exe.config
+D:\Projekty\kopik2\kopik\obj\Debug\kopik.exe
+D:\Projekty\kopik2\kopik\obj\Debug\kopik.pdb

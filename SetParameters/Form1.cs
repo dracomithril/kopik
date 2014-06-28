@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using settings;
 
 
 namespace SetParameters
@@ -18,15 +19,15 @@ namespace SetParameters
         public Form1()
         {
             InitializeComponent();
-            string[] lines = System.IO.File.ReadAllLines(dirFile);
-            foreach (string d in lines)
+            //string[] lines = System.IO.File.ReadAllLines(dirFile);
+            foreach (string d in new Ustawienia().GetList())
             {
                 listBox1.Items.Add(d);
                 
             }
-            textBox1.Text = System.IO.File.ReadAllText(@"gdzie.ini");
+            textBox1.Text = new Ustawienia().GetDir();
         }
-        string dirFile = @"katalogi.ini";
+      
         
         
         
@@ -66,33 +67,30 @@ namespace SetParameters
 
         private void save_Click(object sender, EventArgs e)
         {
+          
             string[] list = new string[listBox1.Items.Count];
             listBox1.Items.CopyTo(list, 0);
-            string basicDir = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
-            string combinedDir = System.IO.Path.Combine(basicDir, dirFile);
-            //MessageBox.Show(combinedDir);
-            if(!System.IO.File.Exists(combinedDir))
-            {
-                MessageBox.Show("nie ma pliku, zostanie utworzony");
-                System.IO.File.Create(combinedDir);
-            }
-            else{
+          
+            
             try
             {
-                System.IO.File.WriteAllLines(combinedDir, list);
+                
+                new Ustawienia().SetTableOfElements(list);
+                //textBox1.Text = settings.Kopiowanie.GetDir();
             }
             catch(Exception z)
             {
                 MessageBox.Show(z.Message);
             }
-            }
+            
         }
+
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            
-            string[] list = System.IO.File.ReadAllLines(@"katalogi.ini");
+
+            string[] list = new Ustawienia().GetList();
 
             foreach (string li in list)
             {
@@ -107,22 +105,17 @@ namespace SetParameters
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            
+           string where_copy = null;
             folderBrowserDialog1.Description = "Wybierz folder docelowy";
             DialogResult result = folderBrowserDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                string where_copy = folderBrowserDialog1.SelectedPath;
-                string basicDir = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
-                string combinedDir = System.IO.Path.Combine(basicDir, "kopik.exe");
-                if (System.IO.File.Exists(combinedDir))
-                {
-                    System.Diagnostics.Process.Start(combinedDir, "setD " + where_copy);
-                    System.IO.File.WriteAllText(@"gdzie.ini", where_copy);
-                    textBox1.Text = System.IO.File.ReadAllText(@"gdzie.ini");
-                }
-                else MessageBox.Show("nie ma kopika ");
+                where_copy = folderBrowserDialog1.SelectedPath;
+                //string basicDir = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
+                //string combinedDir = System.IO.Path.Combine(basicDir, "kopik.exe");
+                new Ustawienia().SetDir(where_copy);
             }
+            textBox1.Text = where_copy;
 
         }
 
@@ -143,6 +136,7 @@ namespace SetParameters
             string combinedDir = System.IO.Path.Combine(basicDir, "kopik.exe");
             System.Diagnostics.Process.Start(combinedDir,"step");
         }
+       
 
        
 
