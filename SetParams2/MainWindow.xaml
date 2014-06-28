@@ -1,0 +1,47 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SetParams2" xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="SetParams2.MainWindow"
+        Title="MainWindow" Height="418.955" Width="517.836" ResizeMode="NoResize">
+    <Window.DataContext>
+        <local:BasicResources x:Name="storage">
+            <local:BasicResources.CopyThisList>
+                <System:String>dodajcos</System:String>
+                <System:String>inny świat</System:String>
+            </local:BasicResources.CopyThisList>
+        </local:BasicResources>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180*"/>
+            <ColumnDefinition Width="79*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="79*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="2" >
+            <MenuItem Header="_Opcje" />
+            <MenuItem Header="_Pomoc"/>
+        </Menu>
+        <StackPanel Grid.Row="1">
+            <Label Content="Ścieżka docelowa"/>
+            <TextBox x:Name="tbCopyHere"  />
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" VerticalAlignment="Center">
+            <Button x:Name="bAddFile" Content="Dodaj plik" Click="bAddFile_Click" Margin="5,2"/>
+            <Button x:Name="bAddDir" Content="Dodaj katalog" Click="bAddDir_Click" Margin="5,2"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <Label Content="Skopiuj to:"/>
+            <ListBox x:Name="lbElements" ItemsSource="{Binding BasicResource.CopyThisList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  MinHeight="150"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="2">
+            <Button x:Name="bRunApp" Content="Uruchom" Margin="5,50" Height="50" Click="bRunApp_Click"/>
+            <Button x:Name="bRefresh" Content="Odświerz" Margin="5" Height="25" />
+            <Button x:Name="bDelete" Content="Usuń" Margin="5" Height="25" />
+            <Button x:Name="bSaveList" Content="Zapisz liste" Margin="5" Height="25" Click="bSaveList_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
