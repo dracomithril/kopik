@@ -138,9 +138,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\KopikUtils\KopikUtils.csproj">
       <Project>{e9e4c63e-05c5-4c42-9e17-d200bf113a34}</Project>
       <Name>KopikUtils</Name>
